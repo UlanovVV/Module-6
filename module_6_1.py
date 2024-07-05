@@ -16,10 +16,8 @@ class Plant:
 class Mammal(Animal):
     def __init__(self, name):
         super().__init__(name) #Позволяет использовать родительские классы
-        
-""" Логика для еды. Если растение съедобное то меняем статус на накормелен, иначе умираем"""
-
-    def eat(self, food):
+       
+    def eat(self, food): #""" Логика для еды. Если растение съедобное то меняем статус на накормелен, иначе умираем"""
         if food.edible:
             self.fed = True
             print(f"{self.name} съел {food.name}")
