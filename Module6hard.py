@@ -53,10 +53,10 @@ class Circle(Figure):
 
 class Triangle(Figure):
     sides_count = 3
-    valid_sides = sides_count
 
-    def __init__(self, color, *sides, __sides_count):
-        super().__init__(color, *sides, __sides_count)
+    def __init__(self, __color, __sides):
+        self.sides_count = Triangle.sides_count
+        super().__init__(__color, __sides)
         p = len(self) / 2
         sides = self.get_sides()
         self.side_a = sides[0]
